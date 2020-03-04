@@ -1,0 +1,11 @@
+s.abb<-state.abb
+#print(s)
+s.area<-state.area
+s.division<-state.division
+s.name<-state.name
+s.region<-state.region
+s<-data.frame(s.abb,s.area,s.division,s.name,s.region)
+print(colnames(s))
+print(substring(colnames(s),3:6))
+colnames(s)<-c("abb","are","div","nam","reg")
+print(s)
