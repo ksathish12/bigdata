@@ -4,14 +4,14 @@ s.area<-state.area
 s.division<-state.division
 s.name<-state.name
 s.region<-state.region
-s<-data.frame(s.abb,s.area,s.division,s.name,s.region)
+s<-data.frame(s.abb,s.area,s.division,s.name,s.region,row.names = s.name)
 
 names<-colnames(s)
 #print(substring(names,1:3,1:3))
 #colnames(s)<-c("abb","are","div","nam","reg")
 #print(s)
 
-
+#colnames(s)<-substring(colnames(s),3,5) # short method
 new1<-c() #creating the empty vector new1
 
 for (val in colnames(s))
@@ -23,4 +23,5 @@ for (val in colnames(s))
 #print(new1)
 newColname<-new1 #storing the vector new1 in the variable newColname
 colnames(s)<-c(newColname) #changing the existing column name with newColname
+#rownames(s)<-c(s.name)
 print(s)

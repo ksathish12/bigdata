@@ -14,7 +14,8 @@ print(a)
 #t<-data.frame(a[5])
 #m<-data.frame(a[6])
 #final<-cbind(t,rm,rf,um,uf,m)
-final <- a[, c(5, 1, 2, 3, 4, 6)]
+#final <- a[, c(5, 1, 2, 3, 4, 6)]
+final <- a[, c(5, 1:4, 6)]
 print(final)
 
 #print(a)
